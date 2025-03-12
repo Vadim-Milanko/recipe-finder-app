@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import { FETCH_URLS, QUERIES } from '@/app/constants/fetchUrls';
 
 const API_KEY = process.env.API_KEY;
@@ -23,7 +25,14 @@ export async function RecipeDetails({ id }: { id: string }) {
     <div className="min-h-screen bg-gray-200 p-6">
       <h1 className="text-3xl font-bold text-black text-center mb-4">{recipe.title}</h1>
 
-      <img src={recipe.image} alt={recipe.title} className="w-full max-w-2xl mx-auto rounded-lg shadow-md" />
+      <Image
+        className="w-full max-w-2xl mx-auto rounded-lg shadow-md"
+        src={recipe.image}
+        alt={recipe.title}
+        width={500}
+        height={400}
+        priority
+      />
 
       <h2 className="text-2xl font-semibold text-black mt-6">Ingredients</h2>
 
