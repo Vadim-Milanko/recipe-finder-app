@@ -54,6 +54,7 @@ export default async function RecipesPage({ searchParams }: { searchParams: UrlP
       </div>
     );
   } catch (error) {
+    console.log(error);
     return <p className="text-red-500 text-center mt-10">Failed to load recipes. Please try again later.</p>;
   }
 }
