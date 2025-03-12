@@ -19,8 +19,6 @@ async function getRecipeDetails(id: string) {
 export async function RecipeDetails({ id }: { id: string }) {
   const recipe = await getRecipeDetails(id);
 
-  console.log(recipe);
-
   return (
     <div className="min-h-screen bg-gray-200 p-6">
       <h1 className="text-3xl font-bold text-black text-center mb-4">{recipe.title}</h1>
