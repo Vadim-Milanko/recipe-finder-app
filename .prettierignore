@@ -1,0 +1,20 @@
+# Ignore artifacts:
+.next
+out
+build
+
+# Ignore temporary files
+node_modules
+coverage
+
+# Ignore config files and git metadata
+.git
+.github/
+.gitignore
+.prettierignore
+
+#  Ignore all HTML files:
+*.html
+
+# Ignore package-lock
+package-lock.json
